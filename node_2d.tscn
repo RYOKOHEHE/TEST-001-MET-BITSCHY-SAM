@@ -1,6 +1,12 @@
-[gd_scene load_steps=5 format=3 uid="uid://cnfnadhyg738g"]
+[gd_scene load_steps=6 format=3 uid="uid://cnfnadhyg738g"]
 
 [ext_resource type="Texture2D" uid="uid://b5l5w01grdq0b" path="res://Solaria Demo Tiles.png" id="1_x5sa5"]
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_y2w72"]
+particles_animation = true
+particles_anim_h_frames = 1
+particles_anim_v_frames = 1
+particles_anim_loop = false
 
 [sub_resource type="TileMapPattern" id="TileMapPattern_smivk"]
 tile_data = PackedInt32Array(0, 655360, 0, 65536, 655360, 1, 131072, 655360, 2, 196608, 655360, 4, 262144, 655360, 4, 1, 720896, 0, 65537, 720896, 1, 131073, 720896, 2, 196609, 720896, 3, 262145, 720896, 4, 2, 786432, 0, 65538, 786432, 1, 131074, 786432, 2, 196610, 720896, 3, 262146, 720896, 4, 3, 655360, 0, 65539, 655360, 1, 131075, 655360, 2, 196611, 720896, 3, 262147, 720896, 4, 4, 720896, 0, 65540, 720896, 1, 131076, 720896, 2, 196612, 720896, 3, 262148, 720896, 4, 5, 786432, 0, 65541, 786432, 1, 131077, 786432, 2, 196613, 786432, 4, 262149, 786432, 4)
@@ -395,6 +401,7 @@ pattern_0 = SubResource("TileMapPattern_smivk")
 [node name="Node2D" type="Node2D"]
 
 [node name="TileMap" type="TileMap" parent="."]
+material = SubResource("CanvasItemMaterial_y2w72")
 tile_set = SubResource("TileSet_8s54q")
 format = 2
 layer_0/name = "floor"
