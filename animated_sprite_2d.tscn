@@ -1,0 +1,94 @@
+[gd_scene load_steps=14 format=3 uid="uid://02h7vkdyneb"]
+
+[ext_resource type="Texture2D" uid="uid://dk3jyqxamc72u" path="res://ART/idle.png" id="1_gykwb"]
+[ext_resource type="Texture2D" uid="uid://cc165h0567avr" path="res://ART/Right.png" id="2_flq3d"]
+[ext_resource type="Texture2D" uid="uid://smjfwoow8gel" path="res://ART/Right (1).png" id="3_37ivc"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bxeog"]
+atlas = ExtResource("1_gykwb")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_l7n32"]
+atlas = ExtResource("2_flq3d")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gjri7"]
+atlas = ExtResource("2_flq3d")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7nefs"]
+atlas = ExtResource("2_flq3d")
+region = Rect2(0, 16, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fuw7a"]
+atlas = ExtResource("2_flq3d")
+region = Rect2(16, 16, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_n135r"]
+atlas = ExtResource("3_37ivc")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_142ye"]
+atlas = ExtResource("3_37ivc")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hc451"]
+atlas = ExtResource("3_37ivc")
+region = Rect2(0, 16, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7dlqt"]
+atlas = ExtResource("3_37ivc")
+region = Rect2(16, 16, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_1ka5j"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bxeog")
+}],
+"loop": true,
+"name": &"idlewalk_no",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_l7n32")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gjri7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7nefs")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fuw7a")
+}],
+"loop": true,
+"name": &"walk right",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_n135r")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_142ye")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hc451")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7dlqt")
+}],
+"loop": true,
+"name": &"walk_left",
+"speed": 5.0
+}]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D"]
+position = Vector2(9, 9)
+scale = Vector2(0.992883, 1)
+sprite_frames = SubResource("SpriteFrames_1ka5j")
+animation = &"walk right"
+frame = 2
+frame_progress = 0.839996
