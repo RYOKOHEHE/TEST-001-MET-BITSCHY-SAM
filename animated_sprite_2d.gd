@@ -43,3 +43,5 @@ func play_anim(dir):
 		anim.play("walk_down")
 	if dir == "none":
 		anim.play("walk_no")
+
+#poopy woopy
